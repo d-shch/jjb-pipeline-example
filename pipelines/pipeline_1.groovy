@@ -1,3 +1,3 @@
 node('master') {
-	sh 'ping www.smartlabs.tv -c 5'
+	sh "ping ${url} -c 5"
 }

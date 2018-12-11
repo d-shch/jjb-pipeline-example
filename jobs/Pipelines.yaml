@@ -4,6 +4,15 @@
         - 'Pipeline_{pipeline_number}':
             pipeline_number: '1'
             jenkins_file: 'pipelines/pipeline_1.groovy'
+            url: 'ya.ru'
+        - 'Pipeline_{pipeline_number}':
+            pipeline_number: '2'
+            jenkins_file: 'pipelines/pipeline_1.groovy'
+            url: 'ozon.ru'
+        - 'Pipeline_{pipeline_number}':
+            pipeline_number: '3'
+            jenkins_file: 'pipelines/pipeline_1.groovy'
+            url: 'google.com'
 - job-template:
     name: 'Pipeline_{pipeline_number}'
     project-type: pipeline
@@ -16,3 +25,7 @@
                     - '*/master'
                 wipe-workspace: true
         script-path: '{jenkins_file}'
+    properties:
+        - inject:
+            properties-content: |
+                url={url}
