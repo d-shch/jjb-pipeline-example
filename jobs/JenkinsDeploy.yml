@@ -7,7 +7,8 @@
         - git:
             branches:
             - '*/master'
-            credentials-id: 379268d2-8b01-42a1-bfa3-47eeee193be6
-            url: https://github.com/d-shch/jjb-pipeline-example.git
+                credentials-id: 379268d2-8b01-42a1-bfa3-47eeee193be6
+                url: https://github.com/d-shch/jjb-pipeline-example.git
     triggers:
-        - github
+        - pollscm:
+            cron: "*/1 * * * *"
