@@ -1,3 +1,5 @@
+@Library('helper') _
+
 node('master') {
 	MyLib.git("jjb-pipeline-example.git", "master")
 	sh 'ls'
