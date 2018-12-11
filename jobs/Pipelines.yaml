@@ -3,7 +3,7 @@
     jobs:
         - 'Pipeline_{pipeline_number}':
             pipeline_number: '1'
-            jenkins_file: 'pipeline/pipeline_1.groovy'
+            jenkins_file: 'pipelines/pipeline_1.groovy'
 - job-template:
     name: 'Pipeline_{pipeline_number}'
     project-type: pipeline
